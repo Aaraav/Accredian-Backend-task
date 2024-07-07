@@ -1,16 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-const indexRouter = require('./views/server'); // Assuming index.js is in the same directory
-// const referalRouter=require('../backend/views/index2');
+const indexRouter = require('./views/server'); 
 const app = express();
 
-app.use(cors({
-    origin: 'https://accredian-frontend-task-ashy.vercel.app/'
-}));
-app.use(express.json()); // Middleware to parse JSON request bodies
-
-app.use('/api/user', indexRouter); // Mount the routes from index.js
-// app.use('/api/referal',referalRouter);
+const corsOptions = {
+    origin: 'https://accredian-frontend-task-ashy.vercel.app',
+    optionsSuccessStatus: 200 
+  };
+app.use(express.json()); 
+app.use('/api/user', indexRouter); 
 
 
 const PORT = 4000;
