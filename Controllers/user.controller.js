@@ -13,7 +13,7 @@ const createUser = async (req, res) => {
         });
 
         if(checkuser){
-            return res.json("user is already registered");
+            return res.send("user is already registered");
         }
         const newUser = await prisma.user.create({
             data: {

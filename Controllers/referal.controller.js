@@ -35,7 +35,7 @@ console.log('referee',referee);
       });
   
       if (existingReferral) {
-        return res.status(400).json({ error: 'Referral already given' });
+        return res.status(500).json({ message: 'Referral already given' });
       }
 
     const referralGiven = await prisma.referal.create({
