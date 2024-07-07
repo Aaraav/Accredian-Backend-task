@@ -66,7 +66,7 @@ if(referralGiven &&  referralReceived){
       });
 
       const info = await transporter.sendMail({
-        from: my_email, // sender address
+        from: my_email, 
         to: `aaraav10@gmail.com,${user_email}`, 
         subject: "Referal Information", 
         text: `Dear Recipient,

@@ -5,7 +5,7 @@ const indexRouter = require('./views/server'); // Assuming index.js is in the sa
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: 'https://accredian-frontend-task-ashy.vercel.app/'
 }));
 app.use(express.json()); // Middleware to parse JSON request bodies
 
