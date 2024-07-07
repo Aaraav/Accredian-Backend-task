@@ -11,7 +11,7 @@ console.log('user_email',user_email);
     });
 console.log('referrer',referrer);
     if (!referrer) {
-      return res.status(404).json({ error: 'Referrer not found' });
+      return res.status(500).json({ message: 'Referrer not found' });
     }
 
     const referee = await prisma.user.findUnique({
@@ -21,7 +21,7 @@ console.log('referrer',referrer);
     });
 console.log('referee',referee);
     if (!referee) {
-      return res.status(404).json({ error: 'Referee not found' });
+      return res.status(500).json({ message: 'Referee not found' });
     }
 
 
