@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const indexRouter = require('../backend/views/index'); // Assuming index.js is in the same directory
+const indexRouter = require('./views/server'); // Assuming index.js is in the same directory
 // const referalRouter=require('../backend/views/index2');
 const app = express();
 
